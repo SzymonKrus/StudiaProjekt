@@ -41,12 +41,66 @@ def register():
 
 @app.route('/quiz', methods=['GET', 'POST'])
 def quiz():
+    questions = [
+        {
+            'question': 'Kiedy wybuchła II wojna światowa?',
+            'options': ['a) 1939', 'b) 1945', 'c) 1918'],
+            'answer': 'a'
+        },
+        {
+            'question': 'Kto był pierwszym cesarzem Rzymu?',
+            'options': ['a) Neron', 'b) Oktawian August', 'c) Juliusz Cezar'],
+            'answer': 'b'
+        },
+        {
+            'question': 'W którym roku Polska odzyskała niepodległość po zaborach?',
+            'options': ['a) 1918', 'b) 1920', 'c) 1939'],
+            'answer': 'a'
+        },
+        {
+            'question': 'Jakie wydarzenie rozpoczęło rewolucję francuską?',
+            'options': ['a) Bitwa pod Waterloo', 'b) Zdobycie Bastylii', "c) Zamach na Robespierre'a"],
+            'answer': 'b'
+        },
+        {
+            'question': 'Kim był Mieszko I?',
+            'options': ['a) Pierwszym królem Polski', 'b) Pierwszym prezydentem RP', 'c) Pierwszym historycznym władcą Polski'],
+            'answer': 'c'
+        },
+        {
+            'question': 'W jakim roku miała miejsce bitwa pod Grunwaldem?',
+            'options': ['a) 1410', 'b) 1492', 'c) 1385'],
+            'answer': 'a'
+        },
+        {
+            'question': 'Kto był wodzem Związku Radzieckiego podczas II wojny światowej?',
+            'options': ['a) Lenin', 'b) Stalin', 'c) Chruszczow'],
+            'answer': 'b'
+        },
+        {
+            'question': 'Jakie państwo zbudowało piramidy w Gizie?',
+            'options': ['a) Rzym', 'b) Grecja', 'c) Egipt'],
+            'answer': 'c'
+        },
+        {
+            'question': 'Kto odkrył Amerykę w 1492 roku?',
+            'options': ['a) Wikingowie', 'b) Krzysztof Kolumb', 'c) Vasco da Gama'],
+            'answer': 'b'
+        },
+        {
+            'question': 'Jaki mur oddzielał Berlin w czasie zimnej wojny?',
+            'options': ['a) Mur Chiński', 'b) Mur Hadriana', 'c) Mur Berliński'],
+            'answer': 'c'
+        }
+    ]
     if request.method == 'POST':
-        answers = [request.form.get('q1'), request.form.get('q2'), request.form.get('q3')]
-        correct = ['a', 'b', 'c']
-        score = sum([1 for i in range(3) if answers[i] == correct[i]])
-        return render_template('result.html', score=score)
-    return render_template('quiz.html')
+        user_answers = [
+            request.form.get(f'q{i+1}') for i in range(10)
+        ]
+        correct_answers = [q['answer'] for q in questions]
+        score = sum(1 for i in range(10) if user_answers[i] is not None and user_answers[i] == correct_answers[i])
+        return render_template('result.html', score=score, total=len(questions))
+    return render_template('quiz.html', questions=questions)
 
 @app.route('/guestbook', methods=['GET', 'POST'])
 def guestbook():
