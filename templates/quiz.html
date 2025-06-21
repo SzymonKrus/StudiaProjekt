@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="{{ style }}">
 </head>
 <body>
-<header>Quiz wiedzy</header>
+<header>Quiz wiedzy historycznej</header>
 <nav>
     <a href="/">Start</a>
     <a href="/register">Rejestracja</a>
@@ -14,16 +14,77 @@
     <a href="/guestbook">Księga Gości</a>
 </nav>
 <main>
-    <h2>Rozwiąż quiz</h2>
+    <h2>Rozwiąż quiz historyczny</h2>
     <form method="post">
-        <label>1. Co oznacza skrót HTML?</label>
-        <select name="q1"><option value="a">HyperText Markup Language</option><option value="b">HighText Machine Language</option><option value="c">Hyperloop Machine Language</option></select>
+        <label>1. Kiedy wybuchła II wojna światowa?</label>
+        <select name="q1">
+            <option value="a">1939</option>
+            <option value="b">1945</option>
+            <option value="c">1918</option>
+        </select>
 
-        <label>2. Który język służy do stylizacji?</label>
-        <select name="q2"><option value="a">JavaScript</option><option value="b">CSS</option><option value="c">Python</option></select>
+        <label>2. Kto był pierwszym cesarzem Rzymu?</label>
+        <select name="q2">
+            <option value="a">Neron</option>
+            <option value="b">Oktawian August</option>
+            <option value="c">Juliusz Cezar</option>
+        </select>
 
-        <label>3. Jaki port domyślnie wykorzystuje HTTP?</label>
-        <select name="q3"><option value="a">21</option><option value="b">443</option><option value="c">80</option></select>
+        <label>3. W którym roku Polska odzyskała niepodległość po zaborach?</label>
+        <select name="q3">
+            <option value="a">1918</option>
+            <option value="b">1920</option>
+            <option value="c">1939</option>
+        </select>
+
+        <label>4. Jakie wydarzenie rozpoczęło rewolucję francuską?</label>
+        <select name="q4">
+            <option value="a">Bitwa pod Waterloo</option>
+            <option value="b">Zdobycie Bastylii</option>
+            <option value="c">Zamach na Robespierre'a</option>
+        </select>
+
+        <label>5. Kim był Mieszko I?</label>
+        <select name="q5">
+            <option value="a">Pierwszym królem Polski</option>
+            <option value="b">Pierwszym prezydentem RP</option>
+            <option value="c">Pierwszym historycznym władcą Polski</option>
+        </select>
+
+        <label>6. W jakim roku miała miejsce bitwa pod Grunwaldem?</label>
+        <select name="q6">
+            <option value="a">1410</option>
+            <option value="b">1492</option>
+            <option value="c">1385</option>
+        </select>
+
+        <label>7. Kto był wodzem Związku Radzieckiego podczas II wojny światowej?</label>
+        <select name="q7">
+            <option value="a">Lenin</option>
+            <option value="b">Stalin</option>
+            <option value="c">Chruszczow</option>
+        </select>
+
+        <label>8. Jakie państwo zbudowało piramidy w Gizie?</label>
+        <select name="q8">
+            <option value="a">Rzym</option>
+            <option value="b">Grecja</option>
+            <option value="c">Egipt</option>
+        </select>
+
+        <label>9. Kto odkrył Amerykę w 1492 roku?</label>
+        <select name="q9">
+            <option value="a">Wikingowie</option>
+            <option value="b">Krzysztof Kolumb</option>
+            <option value="c">Vasco da Gama</option>
+        </select>
+
+        <label>10. Jaki mur oddzielał Berlin w czasie zimnej wojny?</label>
+        <select name="q10">
+            <option value="a">Mur Chiński</option>
+            <option value="b">Mur Hadriana</option>
+            <option value="c">Mur Berliński</option>
+        </select>
 
         <button type="submit">Wyślij</button>
     </form>
