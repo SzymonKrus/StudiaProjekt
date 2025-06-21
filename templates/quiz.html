@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="{{ style }}">
+</head>
+<body>
+<header>Quiz wiedzy</header>
+<nav>
+    <a href="/">Start</a>
+    <a href="/register">Rejestracja</a>
+    <a href="/quiz">Quiz</a>
+    <a href="/guestbook">Księga Gości</a>
+</nav>
+<main>
+    <h2>Rozwiąż quiz</h2>
+    <form method="post">
+        <label>1. Co oznacza skrót HTML?</label>
+        <select name="q1"><option value="a">HyperText Markup Language</option><option value="b">HighText Machine Language</option><option value="c">Hyperloop Machine Language</option></select>
+
+        <label>2. Który język służy do stylizacji?</label>
+        <select name="q2"><option value="a">JavaScript</option><option value="b">CSS</option><option value="c">Python</option></select>
+
+        <label>3. Jaki port domyślnie wykorzystuje HTTP?</label>
+        <select name="q3"><option value="a">21</option><option value="b">443</option><option value="c">80</option></select>
+
+        <button type="submit">Wyślij</button>
+    </form>
+</main>
+<footer>&copy; 2025 Quiz wiedzy</footer>
+</body>
+</html>

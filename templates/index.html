@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Strona główna</title>
+    <link rel="stylesheet" href="{{ style }}">
+    <script defer src="{{ script }}"></script>
+</head>
+<body>
+<header>Moja Aplikacja Webowa</header>
+<nav>
+    <a href="/">Start</a>
+    <a href="/register">Rejestracja</a>
+    <a href="/quiz">Quiz</a>
+    <a href="/guestbook">Księga Gości</a>
+</nav>
+<main>
+    <h2>Witaj na stronie głównej!</h2>
+    <p>Liczba odwiedzin: <strong>{{ count }}</strong></p>
+    <p>Aktualny czas: <span id="clock"></span></p>
+</main>
+<footer>&copy; 2025 Aplikacja zaliczeniowa Flask</footer>
+</body>
+</html>

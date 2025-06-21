@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Rejestracja</title>
+    <link rel="stylesheet" href="{{ style }}">
+</head>
+<body>
+<header>Rejestracja</header>
+<nav>
+    <a href="/">Start</a>
+    <a href="/register">Rejestracja</a>
+    <a href="/quiz">Quiz</a>
+    <a href="/guestbook">Księga Gości</a>
+</nav>
+<main>
+    <h2>Formularz rejestracyjny</h2>
+    <form method="post">
+        <label>Imię i nazwisko:</label>
+        <input type="text" name="name" required>
+        <label>Adres e-mail:</label>
+        <input type="email" name="email" required>
+        <button type="submit">Zarejestruj</button>
+    </form>
+</main>
+<footer>&copy; 2025 Rejestracja użytkownika</footer>
+</body>
+</html>

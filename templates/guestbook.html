@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Księga gości</title>
+    <link rel="stylesheet" href="{{ style }}">
+</head>
+<body>
+<header>Księga Gości</header>
+<nav>
+    <a href="/">Start</a>
+    <a href="/register">Rejestracja</a>
+    <a href="/quiz">Quiz</a>
+    <a href="/guestbook">Księga Gości</a>
+</nav>
+<main>
+    <h2>Zostaw wpis</h2>
+    <form method="post">
+        <textarea name="entry" rows="4" placeholder="Napisz coś..." required></textarea>
+        <button type="submit">Dodaj wpis</button>
+    </form>
+    <h3>Poprzednie wpisy:</h3>
+    <ul>{% for line in entries %}<li>{{ line }}</li>{% endfor %}</ul>
+</main>
+<footer>&copy; 2025 Księga Gości</footer>
+</body>
+</html>
